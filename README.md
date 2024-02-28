@@ -16,6 +16,7 @@ Click Ctrl+Q or the button in the extensions menu to open the interface. You wil
 - `Replace 4 with 5`
 - `Open 3 google search tabs`
 - `Open 50 google search tabs`
+- `Open a google search tab every 5 seconds`
 - `Show Norway in google maps`
 - `Rotate 5 degrees`
 - `Upside down`
@@ -23,5 +24,6 @@ Click Ctrl+Q or the button in the extensions menu to open the interface. You wil
 - `Go back`
 - `Click the first link`
 - `Log the page HTML to the console`
+- `Show Nvidia stock price`
 ## Note
 The latest version of Chrome extensions (v3) does not allow injecting arbitrary Javascript code. This extension uses v2, which  Google plans to disable around June 2024. 
