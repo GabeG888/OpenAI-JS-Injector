@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "OpenAI JS Injector",
+    "description": "Modify page contents by injecting Javascript with GPT-3.5.",
+    "version": "1.0",
+    "browser_action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+          "16": "icons/icon_16.png",
+          "32": "icons/icon_32.png",
+          "48": "icons/icon_48.png",
+          "128": "icons/icon_128.png"
+        }
+      },
+    "permissions": ["activeTab", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "commands": {
+      "open-popup": {
+        "suggested_key": {
+          "default": "Ctrl+Q",
+          "mac": "Command+Q"
+        },
+        "description": "Open popup"
+      }
+    }
+  }
