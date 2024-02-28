@@ -39,7 +39,7 @@ function generateScript(prompt) {
             }
             Don't use a code block for the json.
             Always respond in valid javascript that can be injected into a webpage, in the json format.
-            If the input is javascript code, just return the input.
+            If the input is javascript code, just return the input in the JSON format.
             `;
             formattedPrompt = JSON.stringify({
                 "user_input": prompt
@@ -61,7 +61,6 @@ chrome.runtime.onMessage.addListener(function(request) {
     if (request.inputData) {
         console.log(request.inputData);
         chrome.storage.local.get(['tabId'], function(result) {
-            // file deepcode ignore PromiseNotCaughtGeneral: <please specify a reason of ignoring this>
             generateScript(request.inputData).then((response) => {
                 message = response["choices"][0]["message"]["content"];
                 console.log(message);
